@@ -4,3 +4,7 @@
     <%= form.text_field :user_id %><br>
     <%= form.submit "Show photos from user" %>
 <% end %>
+
+<% @photos.each do |photo| %>
+    <img src="https://live.staticflickr.com/<%= photo.server %>/<%= photo.id %>_<%= photo.secret %>_z.jpg">
+<% end %>
